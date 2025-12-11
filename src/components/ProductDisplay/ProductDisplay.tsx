@@ -1,22 +1,21 @@
+import type { ProductDisplayProps } from "../types";
 
+const ProductDisplay: React.FC<ProductDisplayProps> = ({
+    product,
+    showDescription,
+    showStockStatus,
+    onAddToCart
+}) => {
+    return(
+        <>
+<p>{product.name}</p>
+<p>{product.description}</p>
+<p>{product.id}</p>
+<p>{product.imageUrl}</p>
+<p>{product.price}</p>
+<p>{product.inStock}</p>
+        </>
+    )
+}
 
-
-const product = {
-  id: '1',
-  name: 'Wireless Headphones',
-  price: 199.99,
-  description: 'High-quality wireless headphones with noise cancellation.',
-  imageUrl: 'https://example.com/headphones.jpg',
-  inStock: true
-};
- 
-<ProductDisplay
-  product={product}
-  showDescription={true}
-  showStockStatus={true}
-  onAddToCart={(productId) => alert(`Added product ${productId} to cart`)}
->
-  <div className="text-sm text-gray-500">
-    Free shipping available
-  </div>
-</ProductDisplay>
+export default ProductDisplay;

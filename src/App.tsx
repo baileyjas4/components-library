@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import './App.css'
-import { AlertBox } from './components/AlertBox/AlertBox';
-import { UserProfileCard } from './components/UserProfileCard/UserProfileCard';
-import { ProductDisplay } from './components/ProductDisplay/ProductDisplay';
+// import { AlertBox } from './components/AlertBox/AlertBox';
+// import { UserProfileCard } from './components/UserProfileCard/UserProfileCard';
+import  ProductDisplay  from './components/ProductDisplay/ProductDisplay';
 
 
 const App = () => {
@@ -14,22 +14,30 @@ const App = () => {
     setShowAlert(true);
   };
  
+  const product = {
+  id: '1',
+  name: 'Wireless Headphones',
+  price: 199.99,
+  description: 'High-quality wireless headphones with noise cancellation.',
+  imageUrl: 'https://example.com/headphones.jpg',
+  inStock: true
+};
   return (
     <div className="p-4">
-      {showAlert && (
+      {/* {showAlert && (
         <AlertBox
           type="success"
           message="Product added to cart!"
           onClose={() => setShowAlert(false)}
         />
-      )}
+      )} */}
  
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
         <UserProfileCard
           user={user}
           showEmail={true}
           showRole={true}
-        />
+        /> */}
  
         <ProductDisplay
           product={product}
@@ -38,7 +46,6 @@ const App = () => {
           onAddToCart={handleAddToCart}
         />
       </div>
-    </div>
   );
 };
 
