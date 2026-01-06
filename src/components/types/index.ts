@@ -1,5 +1,7 @@
+import React from 'react';
+
 export type AlertType = 'success' | 'error' | 'warning' | 'info';
- 
+
 export interface AlertBoxProps {
   type: AlertType;
   message: string;
@@ -7,7 +9,6 @@ export interface AlertBoxProps {
   children?: React.ReactNode;
 }
 
-// types/index.ts
 export interface User {
   id: string;
   name: string;
@@ -15,7 +16,7 @@ export interface User {
   role: string;
   avatarUrl?: string;
 }
- 
+
 export interface UserProfileCardProps {
   user: User;
   showEmail?: boolean;
@@ -24,8 +25,6 @@ export interface UserProfileCardProps {
   children?: React.ReactNode;
 }
 
-
-// types/index.ts
 export interface Product {
   id: string;
   name: string;
@@ -34,7 +33,7 @@ export interface Product {
   imageUrl?: string;
   inStock: boolean;
 }
- 
+
 export interface ProductDisplayProps {
   product: Product;
   showDescription?: boolean;
